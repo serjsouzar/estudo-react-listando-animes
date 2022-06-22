@@ -2,15 +2,16 @@ import styled from "styled-components";
 
 export const MainTitle = styled.h2`
     height: 1rem;
-    text-align: center;
+    text-align:center;
     margin-top: 8rem;
     font-size: 2.8rem;
 `
 
 export const Container = styled.div`
-  max-width: 1120px;
-  padding: 4rem;
+  
+  padding: 2.5rem 4rem 5rem;
   display: flex;
+  max-width: 1120px;  
   justify-content: center;
 
   input {
@@ -21,18 +22,26 @@ export const Container = styled.div`
     height: 2.5rem;
 
     ::placeholder {
-      text-align: center;
+      justify-content:baseline;
+      padding: 15px;
     }
   }
 `
 export const AnimeCards = styled.div`
 
   width: 1120px;
-  margin: 0 10rem;
-  justify-content: center;
-
+  margin: 5.5rem;
+  margin-top: -1rem;
+  
   li{
-    display: inline;
-    text-align: center;
+    display: grid;
+    align-items: center;
+  }
+
+  #li{
+    display:inline-block;
+    margin: 1rem;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
   }
 `;

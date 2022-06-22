@@ -46,8 +46,10 @@ export function SearchAnimes() {
               {animes.map((anime) => {
                 return (
                   <>
+                    <div id="li">
                     <li key={anime.id}>{anime.attributes.canonicalTitle}</li>
-                    <img src={anime.attributes.posterImage.small} />
+                    <img src={anime.attributes.posterImage.small} width={200} height={300} />
+                    </div>
                   </>
                 );
               })}
