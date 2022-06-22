@@ -43,5 +43,14 @@ export const AnimeCards = styled.div`
     margin: 1rem;
     align-items: center;
     grid-template-columns: repeat(3, 1fr);
+
+    #text-title{
+      margin: 5px;
+    }
+
+    img {
+      border-radius: 0.30rem;
+      box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5);
+    }
   }
 `;

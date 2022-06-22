@@ -1,5 +1,7 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { AnimeCards, Container, MainTitle } from "./styles";
+
 
 interface AnimeProps {
   canonicalTitle: string;
@@ -47,7 +49,7 @@ export function SearchAnimes() {
                 return (
                   <>
                     <div id="li">
-                    <li key={anime.id}>{anime.attributes.canonicalTitle}</li>
+                    <li id="text-title"key={anime.id}>{anime.attributes.canonicalTitle}</li>
                     <img src={anime.attributes.posterImage.small} width={200} height={300} />
                     </div>
                   </>
