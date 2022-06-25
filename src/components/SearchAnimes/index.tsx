@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { AnimeCards, Container, MainTitle } from "./styles";
-
+import SearchIcon from "@mui/icons-material/Search";
 
 interface AnimeProps {
   canonicalTitle: string;
@@ -30,15 +30,18 @@ export function SearchAnimes() {
 
   return (
     <>
-      <MainTitle>Listando Animes</MainTitle>
-  
+      <MainTitle>Study Project - Anime Search</MainTitle>
+
       <Container>
-        <input
-          placeholder="Pesquise por animes"
-          type="search"
-          value={text}
-          onChange={(text) => setText(text.target.value)}
-        />
+        <div id="box">
+          <SearchIcon />
+          <input
+            placeholder="Search"
+            type="search"
+            value={text}
+            onChange={(text) => setText(text.target.value)}
+          />
+        </div>
       </Container>
 
       <AnimeCards>
@@ -49,8 +52,14 @@ export function SearchAnimes() {
                 return (
                   <>
                     <div id="li">
-                    <li id="text-title"key={anime.id}>{anime.attributes.canonicalTitle}</li>
-                    <img src={anime.attributes.posterImage.small} width={200} height={300} />
+                      <li id="text-title" key={anime.id}>
+                        {anime.attributes.canonicalTitle}
+                      </li>
+                      <img
+                        src={anime.attributes.posterImage.small}
+                        width={200}
+                        height={300}
+                      />
                     </div>
                   </>
                 );
