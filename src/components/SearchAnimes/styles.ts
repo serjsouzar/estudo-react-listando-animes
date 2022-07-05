@@ -9,11 +9,13 @@ export const MainTitle = styled.h2`
 `;
 
 export const Container = styled.div`
-  padding: 2.5rem 4rem 5rem;
+  padding: 2rem 5rem;
   display: flex;
   max-width: 1120px;
   justify-content: center;
-  align-items: center;
+  text-align: center;
+  margin-left: 8rem;
+  
 
   #box {
     width: 500px;
@@ -37,12 +39,6 @@ export const Container = styled.div`
       height: 40px;
       outline: none;
       font-size: 18px;
-      
-
-      /* padding: 0 5rem;
-    border-radius: 2.5rem;
-    height: 2.5rem;
-    text-align: left; */
 
       ::placeholder {
         margin: 0;
@@ -55,6 +51,7 @@ export const AnimeCards = styled.div`
   width: 1120px;
   margin: 5.5rem;
   margin-top: -1rem;
+  margin-left: 10rem;
 
   li {
     display: grid;
